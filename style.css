@@ -20,13 +20,15 @@ header {
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid #bbb;
+  display: block;
+  margin: 20px auto 40px auto; /* adds space below the image */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional soft shadow */
 }
+
 
 h1 {
   font-size: 3rem;
