@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gameplay Script – Chapter Thirty-Five</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #f4f4f4;
+      color: #222;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .choice {
+      margin-left: 20px;
+    }
+    .note {
+      font-style: italic;
+      color: #555;
+    }
+    .codeblock {
+      background: #eaeaea;
+      padding: 10px;
+      border-left: 4px solid #555;
+      margin: 15px 0;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>GAMEPLAY SCRIPT – CHAPTER THIRTY-FIVE</h1>
+  <h2>Location: Guard Wing Entrance · Time: 17 July, 13:10 · Player: Kane</h2>
+  <div class="section">
+    <strong>Objective:</strong> Reach Maria before it’s too late
+  </div>
+  
+  <div class="section">
+    <h2>CUTSCENE</h2>
+    <p><strong>CAMERA:</strong> Close-up on the trembling wooden door.</p>
+    <p><strong>KANE (VO):</strong><br> The old wooden door shakes and creaks as I push it open...</p>
+    <p><span class="note">[CAMERA ROTATES – Kane slips in through a narrow gap]</span></p>
+    <p><strong>KANE (VO):</strong><br> With the smallest of openings, I slither myself inside, like a snake on a mission to hunt for food.</p>
+  </div>
+
+  <div class="section">
+    <h2>GAMEPLAY BEGINS</h2>
+    <p><strong>QTE TRIGGER:</strong><br> [Enemy Attack Incoming] → [Press RT to Dodge | Miss: Take 15% damage]</p>
+    <p><strong>IF FAIL:</strong><br><strong>KANE (VO):</strong> My right cheek aches, eyes watering slightly...<br><span class="note">[Blood splashes – CAMERA SLO-MO IMPACT]</span></p>
+  </div>
+
+  <div class="section">
+    <h2>DIALOGUE MOMENT</h2>
+    <p>Guard punches Kane in the face. Kane retaliates.</p>
+    <p><strong>PLAYER PROMPT:</strong></p>
+    <div class="choice">[A] Strike back instantly</div>
+    <div class="choice">[B] Ask who sent him</div>
+    <div class="choice">[C] Step back and observe</div>
+
+    <p><strong>[A] Strike Back (Canon Path)</strong></p>
+    <p>Kane punches the guard. Crunch. The guard howls and calls reinforcements.</p>
+    <p><strong>GUARD:</strong> “BROTHERS, THE PRINCE IS HERE.”</p>
+    <p><strong>Morality Impact:</strong> –10 (Aggression)<br><strong>Rage Meter:</strong> +15%<br><strong>Skill XP Gained:</strong> Flame Mastery +5</p>
+
+    <p><strong>[B] Ask Who Sent Him</strong></p>
+    <p><strong>KANE:</strong> “Who told you to hit me?”<br><strong>GUARD (panicking):</strong> “Everyone! The king! You—you weren’t supposed to make it here!”</p>
+    <p><strong>Morality Impact:</strong> +5 (Diplomacy)<br><strong>Rage Meter:</strong> +5%<br><strong>Skill XP Gained:</strong> Diplomacy +10</p>
+
+    <p><strong>[C] Step Back and Observe</strong></p>
+    <p>Kane says nothing. The guard hesitates, then calls out to the others.</p>
+    <p><strong>Morality Impact:</strong> +0<br><strong>Rage Meter:</strong> +0<br><strong>Skill XP Gained:</strong> Stealth +5</p>
+  </div>
+
+  <div class="section">
+    <h2>CUTSCENE CONTINUES</h2>
+    <p><strong>GUARD (chuckling nervously):</strong> Backing away, rubbing his neck</p>
+    <p><strong>KANE:</strong> “I can clearly see you walking away.”</p>
+    <p><strong>GUARD:</strong> “Uhh, you can?”</p>
+    <p><strong>KANE:</strong> “Are you alright?”<br>“Of course I can.”</p>
+    <p><strong>GUARD:</strong> “You broke my one good feature, of course I am not alright.”</p>
+    <p><strong>KANE:</strong> “Sorry about that, but you did land the first punch.”</p>
+    <p><strong>GUARD:</strong> “I did, but only because I was ordered to keep you away from the princess.”</p>
+
+    <p><strong>MORALITY CHECKPOINT:</strong> “Who do you fight for?”</p>
+    <p><strong>PLAYER CHOICE:</strong></p>
+    <div class="choice">[A] “She’s not yours to keep from me.”</div>
+    <div class="choice">[B] “So you’re another pawn in his game?”</div>
+    <div class="choice">[C] “Stand down. I won’t say it again.”</div>
+
+    <p><strong>VFX:</strong> Fire begins to flicker from Kane’s fingertips.</p>
+    <p><strong>KANE (VO):</strong> The darker my thoughts become, the hotter my fingers become...</p>
+    <p><strong>FLAME TIER TRIGGER UNLOCKED:</strong> “Volcanic Blade”</p>
+    <p><strong>Skill Unlocked:</strong> Volcanic Blade – Unleash a fiery strike that cleaves through multiple enemies. Powered by Rage. Costs 30% Rage Meter. Cooldown: 15s.</p>
+
+    <p><strong>GUARD:</strong> “What are you do—”</p>
+    <p>Blade at his throat.</p>
+    <p><strong>GUARD:</strong> “Please let me go.”</p>
+    <p><strong>KANE:</strong> “I really do not have enough time for this...”</p>
+  </div>
+
+  <div class="section">
+    <h2>OBJECTIVE UPDATE</h2>
+    <p><strong>New Objective:</strong> Let the guard live or kill him</p>
+    <p><strong>PLAYER CHOICE:</strong></p>
+    <div class="choice">[A] Spare him — “Get up. Walk away. Never look back.”</div>
+    <div class="choice">[B] Kill him — “Wrong answer.”</div>
+
+    <p><strong>[A] Spare Him</strong><br>Guard stumbles away.<br><strong>Morality Impact:</strong> +10 (Mercy)<br><strong>Rage Meter:</strong> –10%<br><strong>Skill XP Gained:</strong> Diplomacy +15</p>
+
+    <p><strong>[B] Kill Him</strong><br>Kane slices through him. Blood spatters.<br><strong>Morality Impact:</strong> –20 (Execution)<br><strong>Rage Meter:</strong> +20%<br><strong>Skill XP Gained:</strong> Flame Mastery +10</p>
+  </div>
+
+  <div class="section">
+    <h2>CUTSCENE — GUARD WAVE ENTERS</h2>
+    <p><strong>SFX:</strong> Marching boots, door slamming shut</p>
+    <p><strong>KANE:</strong> “I will give you two choices...”</p>
+    <p><strong>SFX:</strong> Swords drawn</p>
+    <p><strong>KANE:</strong> “I see how it is.”</p>
+  </div>
+
+  <div class="section">
+    <h2>COMBAT SEQUENCE: "Trial by Fire"</h2>
+    <p><strong>Enemy Count:</strong> 5</p>
+    <p><strong>Combat System:</strong></p>
+    <ul>
+      <li>Flame Blade (Heavy Damage)</li>
+      <li>Breakable Enemy Swords</li>
+      <li>Melt/Chop Kill Styles</li>
+      <li>Environmental Damage (Torches, Oil)</li>
+    </ul>
+    <p><strong>PLAYER PROMPTS:</strong></p>
+    <div class="codeblock">Press [Y] for flame slash
+Press [LT + RT] to parry-break
+Press [B] to dodge roll
+Press [L3] to trigger Flame Burst (AoE)</div>
+
+    <p><strong>FINISHERS TRIGGERED BY:</strong><br>Hitting specific combos / Critical Rage (60%+)</p>
+  </div>
+
+  <div class="section">
+    <h2>CUTSCENE: STANDOFF</h2>
+    <p>Remaining enemies circle. Breathing heavy. Fire fades.</p>
+    <p><strong>KANE (raising fists):</strong> “Come on, fight me.”</p>
+  </div>
+
+  <div class="section">
+    <h2>BRAWL MODE</h2>
+    <p><strong>Combat Style:</strong> Bare-knuckle</p>
+    <p><strong>Trigger:</strong> 2 enemies grab Kane while 3 punch</p>
+    <div class="codeblock">[Tap A] to resist hold
+[LT] to deflect gut punch
+[RT] to activate Blade Surge escape</div>
+  </div>
+
+  <div class="section">
+    <h2>FINAL COMBAT: EXECUTION FINISH</h2>
+    <p><strong>KANE (VO):</strong> I lift my shoulder blade, then twist my body...</p>
+    <p>Multiple guards drop in a single fiery strike. Blood paints the walls.</p>
+    <p>Blade retracts. Kane runs.</p>
+  </div>
+
+  <div class="section">
+    <h2>OBJECTIVE UPDATE</h2>
+    <p><strong>Reach the Chamber</strong></p>
+    <p><strong>VFX:</strong> Tunnel blurs. Heartbeat audio intensifies.</p>
+    <p><strong>KANE (VO):</strong> My heart is leaping out of my chest...</p>
+  </div>
+
+  <hr style="margin-top: 3rem;" />
+    <footer style="font-size: 0.9rem; color: #666; text-align: center;">
+      © Manar Khashan. All rights reserved. This scene is an original excerpt from my WIP debut fantasy novel <em>Anguish</em>, first written in 2024. Do not copy, reproduce, or use without permission.
+      <br><br>
+      <a href="index.html">← Back to Portfolio</a>
+    </footer>
+  </main>
+</body>
+</html>
