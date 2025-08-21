@@ -4,87 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manar Khashan | Game Writer</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary: #ff7a18;
+      --accent:  #ffd166;
+      --ink:     #0f172a;
+      --paper:   #ffffff;
+    }
+    /* Reset-ish */
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; color: #111; background: var(--paper); }
+    a { color: inherit; }
+
+    /* HERO video section */
+    .video-section { position: relative; height: 80vh; min-height: 520px; overflow: hidden; }
+    .bg-video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: contrast(1.05) saturate(1.05);
+    }
+    .overlay {
+      position: absolute; inset: 0; z-index: 2; color: #fff;
+      display: grid; place-items: center; text-align: center;
+      background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
+      padding: 1rem;
+    }
+    .overlay h1 { font-size: clamp(28px, 6vw, 60px); margin: 0 0 .25rem; letter-spacing: .3px; }
+    .overlay p { margin: 0 0 1rem; opacity: .95; }
+    .btnrow { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
+
+    .btn {
+      pointer-events: auto; text-decoration: none;
+      padding: .85rem 1.2rem; border-radius: 12px; font-weight: 800;
+      transition: transform .05s ease, box-shadow .05s ease, opacity .2s ease;
+    }
+    .btn--primary { background: var(--primary); color: #111; box-shadow: 0 6px 0 #b75400; }
+    .btn--primary:active { transform: translateY(2px); box-shadow: 0 4px 0 #b75400; }
+    .btn--ghost { border: 2px solid var(--accent); color: var(--accent); }
+
+    /* Content sections */
+    .plain { padding: 3rem 1rem; max-width: 900px; margin: 0 auto; }
+    .plain h2 { font-size: clamp(22px, 3.5vw, 36px); margin: 0 0 .5rem; color: var(--ink); }
+    .plain p { line-height: 1.6; color: #1f2937; }
+  </style>
 </head>
 <body>
-  <header>
-<img src="IMG_8247.jpeg" alt="Manar Khashan" class="profile-pic">
 
-    <h1>Manar Khashan</h1>
-    <p class="tagline">Game Writer · Fantasy Author · Narrative Designer</p>
-    <p class="intro-quote">“I build worlds and universes that make players feel. I write stories that would make generations talk. Stories they’ll never forget.”</p>
-  </header>
+  <!-- HERO / OPENING VIDEO -->
+  <section class="video-section" id="top">
+    <video class="bg-video"
+      src="https://raw.githubusercontent.com/manarkhashan/portfolio/main/Copy%20of%20portfolio%20opening%20page.mp4"
+      autoplay muted loop playsinline
+      poster="">
+      <!-- Fallback text if video can't play -->
+      Your browser doesn’t support the video tag.
+    </video>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>I’m a 23-year-old published author with a deep passion for storytelling in all its forms. My debut poetry collection, <strong>Ghost Poetry</strong>explores raw emotion and the human experience. Currently, I’m working on my first fantasy novel, <strong>Anguish</strong> the first installment in a planned six-book series, and immersive game world.</p>
-      <p>My storytelling strengths lie in branching dialogue, emotional depth, cinematic pacing, and vivid worldbuilding. I love crafting characters that feel real, flawed, layered, and alive.
-</p>
-    </section>
-
-    <section>
-      <h2>Writing Samples</h2>
-      <ul>
-        <li><strong>Emotional Storytelling — Maria’s Death</strong> — A raw and devastating scene from my novel Anguish, showcasing grief, pacing, and poetic narration during a tragic loss.<br>
-          <a href="marias-death.html" target="_blank"> Read Scene</a>
-        </li>
-        <li><strong>Combat & Cinematic Action — Kane vs. the Guards
-</strong> — An intense action sequence formatted as an in-game script. Demonstrates rhythm, environment cues, high-stakes dialogue, and fight choreography<br>
-          <a href="kane-vs-guards.html" target="_blank"> Read Scene</a>
-        </li>
-        <li><strong>Cutscene Drama — Kane Finds Maria, Victor, and the Baby
-</strong>Emotional buildup meets narrative clarity as Kane pushes through a crowd and faces his past. Structured as a playable cutscene with voice lines and movement prompts.
-<br>
-          <a href="the-cutscene.html" target="_blank"> Read Scene</a>
-        </li>
-        <li><strong> Narrative Tension — Maria’s Birth Scene
-</strong> — A harrowing, suspense-filled scene rendered in a horror-fantasy tone. Structured as a cinematic script that could blend into gameplay.
-<br>
-          <a href="marias-birth.html" target="_blank"> Read Scene</a>
-        </li>
-        <li><strong>Moral Collapse — The Interrogation Scene
-</strong>Kane confronts the man who claims to have murdered his pregnant wife. This raw, graphic scene explores gray morality, vengeance, and psychological horror, pushing the limits of player loyalty and emotional investment.
-Intended Format: Non-interactive cinematic with branching choice outcome.
-Content Warning: torture, graphic violence, emotional trauma
-<br>
- <a href="torture-scene.html" target="_blank"> Read Scene</a>
-        </li>
-         <li><strong>Psychological Fallout — The Dream Sequence
-</strong>Following the violent interrogation scene, Kane dreams of a peaceful life with his wife and child — only to watch it decay into a disturbing nightmare. This emotionally charged sequence blends surreal horror with grief and guilt, offering players a haunting look into the protagonist’s fractured psyche.
-Intended Format: Cinematic cutscene with optional dream-walk interactivity, depending on player choices in the previous scene.
-</strong>Content Warning: grief, emotional trauma, child death (dream), visual and auditory horror
-          <a href="thedream-scene.html" target="_blank"> Read Scene</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Published Work</h2>
-      <p><strong>Ghost Poetry (2023)</strong><br>
-        My debut poetry collection, Ghost Poetry, is available on Amazon. It has received 5-star reviews for its emotional resonance, vulnerability, and lyrical depth. Readers describe it as hauntingly personal and universally relatable, a quiet exploration of grief, identity, and healing.
-<br>
-        <a href="https://www.amazon.com/ghost-poetry-manar-khashan/dp/B0F1L3RZ9F/ref=sr_1_1?crid=2IKCZP0CT8MMK&dib=eyJ2IjoiMSJ9._491HuYMRxGpmXNJo3sekw.W8x0exb8zTmHMkn4bXW2cTOntZjaTl3kOYDFbtoiUnI&dib_tag=se&keywords=ghost+poetry+manar&qid=1753053227&sprefix=%2Caps%2C475&sr=8-1"> Read on Amazon</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>Hire Me</h2>
-      <p>I’m currently seeking a full-time narrative writing position in the Netherlands, ideally with relocation support and a highly skilled migrant work visa. I bring a unique voice, emotional depth, and a worldbuilder’s mind to every project I join.
-If you're looking for a writer who can build unforgettable characters, shape immersive game worlds, and leave players emotionally wrecked in the best way, I'm ready and I think I would be a great fit for your team.
-</p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>📧 <a href="mailto:manarkhashan@gmail.com">manarkhashan@gmail.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/manar-khashan-3194b6322/" target="linkedin">LinkedIn</a></p>
-    </section>
+    <div class="overlay">
+      <div>
+        <h1>Manar Khashan</h1>
+        <p>Game Writer · Fantasy Author · Narrative Designer</p>
+        <div class="btnrow">
+          <a href="#about" class="btn btn--primary">LOAD PORTFOLIO</a>
+          <a href="#about" class="btn btn--ghost">NEW GAME</a>
+        </div>
+      </div>
+    </div>
   </section>
-    <footer>
-  <p>© 2025 Manar Khashan | <a href="mailto:manarkhashan@gmail.com">Contact Me</a></p>
-</footer>
+
+  <!-- Example next section (so the button has somewhere to scroll) -->
+  <section id="about" class="plain">
+    <h2>About Me</h2>
+    <p>I design choices that matter and scenes players feel the morning after. Strengths: branching dialogue, cinematic pacing, and emotional storytelling.</p>
+    <p>Published author of <em>Ghost Poetry</em>; currently building <em>Anguish</em> (dark fantasy) and game writing samples.</p>
   </section>
-  </main>
+
 </body>
 </html>
