@@ -5,80 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manar Khashan | Game Writer</title>
   <style>
-    :root {
-      --primary: #ff7a18;
-      --accent:  #ffd166;
-      --ink:     #0f172a;
-      --paper:   #ffffff;
-    }
-    /* Reset-ish */
     * { box-sizing: border-box; }
-    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; color: #111; background: var(--paper); }
-    a { color: inherit; }
-
-    /* HERO video section */
-    .video-section { position: relative; height: 80vh; min-height: 520px; overflow: hidden; }
-    .bg-video {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      filter: contrast(1.05) saturate(1.05);
-    }
-    .overlay {
-      position: absolute; inset: 0; z-index: 2; color: #fff;
-      display: grid; place-items: center; text-align: center;
-      background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
-      padding: 1rem;
-    }
-    .overlay h1 { font-size: clamp(28px, 6vw, 60px); margin: 0 0 .25rem; letter-spacing: .3px; }
-    .overlay p { margin: 0 0 1rem; opacity: .95; }
-    .btnrow { display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
-
-    .btn {
-      pointer-events: auto; text-decoration: none;
-      padding: .85rem 1.2rem; border-radius: 12px; font-weight: 800;
-      transition: transform .05s ease, box-shadow .05s ease, opacity .2s ease;
-    }
-    .btn--primary { background: var(--primary); color: #111; box-shadow: 0 6px 0 #b75400; }
-    .btn--primary:active { transform: translateY(2px); box-shadow: 0 4px 0 #b75400; }
-    .btn--ghost { border: 2px solid var(--accent); color: var(--accent); }
-
-    /* Content sections */
-    .plain { padding: 3rem 1rem; max-width: 900px; margin: 0 auto; }
-    .plain h2 { font-size: clamp(22px, 3.5vw, 36px); margin: 0 0 .5rem; color: var(--ink); }
-    .plain p { line-height: 1.6; color: #1f2937; }
+    html, body { margin:0; font-family: system-ui, Inter, Arial, sans-serif; background:#fff; color:#111; }
+    .video-section { position:relative; height:80vh; min-height:520px; overflow:hidden; }
+    .bg-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(1.05) saturate(1.05); }
+    .overlay { position:absolute; inset:0; display:grid; place-items:center; text-align:center; color:#fff;
+               background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55)); padding:1rem; }
+    .overlay h1 { font-size: clamp(28px,6vw,60px); margin:0 0 .25rem; }
+    .overlay p { margin:0 0 1rem; }
+    .btn { display:inline-block; margin:.5rem; padding:.8rem 1.2rem; border-radius:10px; font-weight:800;
+           text-decoration:none; background:#ff7a18; color:#111; box-shadow:0 6px 0 #b75400; }
+    .plain { padding:3rem 1rem; max-width:900px; margin:0 auto; }
+    .plain h2 { font-size:clamp(22px,3vw,36px); margin-bottom:.5rem; }
   </style>
 </head>
 <body>
 
   <!-- HERO / OPENING VIDEO -->
   <section class="video-section" id="top">
-    <video class="bg-video"
-      src="https://raw.githubusercontent.com/manarkhashan/portfolio/main/Copy%20of%20portfolio%20opening%20page.mp4"
-      autoplay muted loop playsinline
-      poster="">
-      <!-- Fallback text if video can't play -->
-      Your browser doesn’t support the video tag.
-    </video>
-
+    <video class="bg-video" src="assets/intro.mp4" autoplay muted loop playsinline></video>
     <div class="overlay">
       <div>
         <h1>Manar Khashan</h1>
         <p>Game Writer · Fantasy Author · Narrative Designer</p>
-        <div class="btnrow">
-          <a href="#about" class="btn btn--primary">LOAD PORTFOLIO</a>
-          <a href="#about" class="btn btn--ghost">NEW GAME</a>
-        </div>
+        <a href="#about" class="btn">LOAD PORTFOLIO</a>
       </div>
     </div>
   </section>
 
-  <!-- Example next section (so the button has somewhere to scroll) -->
+  <!-- WHITE ABOUT SECTION -->
   <section id="about" class="plain">
     <h2>About Me</h2>
-    <p>I design choices that matter and scenes players feel the morning after. Strengths: branching dialogue, cinematic pacing, and emotional storytelling.</p>
+    <p>I design choices that matter and scenes players feel the morning after. My strengths: branching dialogue, cinematic pacing, and emotional storytelling.</p>
     <p>Published author of <em>Ghost Poetry</em>; currently building <em>Anguish</em> (dark fantasy) and game writing samples.</p>
+  </section>
+
+  <!-- WALKING LOOP VIDEO FOR SAMPLES -->
+  <section class="video-section" id="samples">
+    <video class="bg-video" src="assets/loop.mp4" autoplay muted loop playsinline></video>
+    <div class="overlay">
+      <div>
+        <h2>Collect the Quests</h2>
+        <p>3 quick samples below</p>
+        <a class="btn" href="marias-death.html" target="_blank">Maria’s Death</a>
+        <a class="btn" href="kane-vs-guards.html" target="_blank">Kane vs Guards</a>
+        <a class="btn" href="thedream-scene.html" target="_blank">Dream Sequence</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="plain">
+    <h2>Contact</h2>
+    <p><a href="mailto:manarkhashan@gmail.com">manarkhashan@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/manar-khashan-3194b6322/" target="_blank">LinkedIn</a></p>
+    <p><a href="assets/ManarKhashan_CV.pdf" target="_blank">Download CV</a></p>
   </section>
 
 </body>
 </html>
+
+</html>
+
