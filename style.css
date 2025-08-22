@@ -1,97 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset-ish */
+* { box-sizing: border-box; }
+html, body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
+
+/* Video sections */
+.video-section {
+  position: relative;
+  height: 80vh;        /* big, cinematic block */
+  min-height: 520px;   /* don’t get too small */
+  overflow: hidden;    /* hide overflow outside the section */
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(to right, #fdfbfb, #ebedee);
-  color: #2c2c2c;
+/* Make the video cover the whole section */
+.bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crop to fill without distortion */
+}
+
+/* Dark gradient layer so text is readable */
+.overlay {
+  position: absolute;
+  inset: 0;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55));
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: .8rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 800;
+  text-decoration: none;
+  background: #ff7a18;
+  color: #111;
+  box-shadow: 0 6px 0 #b75400;
+}
+
+/* Simple white content block between videos */
+.plain {
+  padding: 3rem 1rem;
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
-  line-height: 1.7;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 20px auto 40px auto; /* adds space below the image */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional soft shadow */
-}
-
-
-h1 {
-  font-size: 3rem;
-  color: #3e3e3e;
-  margin-bottom: 0.5rem;
-}
-
-.tagline {
-  font-size: 1.3rem;
-  color: #7a7a7a;
-}
-
-.intro-quote {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  font-style: italic;
-  color: #5f5f5f;
-}
-
-h2 {
-  font-size: 1.75rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #444;
-  border-left: 4px solid #7f8c8d;
-  padding-left: 10px;
-}
-
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-li {
-  margin-bottom: 1.2rem;
-  font-size: 1.05rem;
-}
-
-a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #005999;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  body {
-    padding: 2rem 1rem;
-  }
-}
