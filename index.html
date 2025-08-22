@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manar Khashan | Game Writer</title>
-  <style>
-    * { box-sizing: border-box; }
-    html, body { margin:0; font-family: system-ui, Inter, Arial, sans-serif; background:#fff; color:#111; }
-    .video-section { position:relative; height:80vh; min-height:520px; overflow:hidden; }
-    .bg-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(1.05) saturate(1.05); }
-    .overlay { position:absolute; inset:0; display:grid; place-items:center; text-align:center; color:#fff;
-               background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55)); padding:1rem; }
-    .overlay h1 { font-size: clamp(28px,6vw,60px); margin:0 0 .25rem; }
-    .overlay p { margin:0 0 1rem; }
-    .btn { display:inline-block; margin:.5rem; padding:.8rem 1.2rem; border-radius:10px; font-weight:800;
-           text-decoration:none; background:#ff7a18; color:#111; box-shadow:0 6px 0 #b75400; }
-    .plain { padding:3rem 1rem; max-width:900px; margin:0 auto; }
-    .plain h2 { font-size:clamp(22px,3vw,36px); margin-bottom:.5rem; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Manar Khashan | Game Writer</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;font-family:system-ui,Inter,Arial,sans-serif;background:#fff;color:#111}
+  .video-section{position:relative;height:80vh;min-height:520px;overflow:hidden}
+  .bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+            filter:contrast(1.05) saturate(1.05)}
+  .overlay{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;
+           background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55));padding:1rem}
+  .btn{display:inline-block;margin-top:12px;padding:.8rem 1.2rem;border-radius:10px;font-weight:800;
+       text-decoration:none;background:#ff7a18;color:#111;box-shadow:0 6px 0 #b75400}
+  .plain{padding:3rem 1rem;max-width:900px;margin:0 auto}
+  h1,h2{margin:0 0 .5rem}
+</style>
 </head>
 <body>
 
-  <!-- HERO / OPENING VIDEO -->
-  <section class="video-section" id="top">
-    <video class="bg-video" src="assets/intro.mp4" autoplay muted loop playsinline></video>
-    <div class="overlay">
-      <div>
-        <h1>Manar Khashan</h1>
-        <p>Game Writer · Fantasy Author · Narrative Designer</p>
-        <a href="#about" class="btn">LOAD PORTFOLIO</a>
-      </div>
+<!-- OPENING / INTRO VIDEO -->
+<section class="video-section" id="top">
+  <video class="bg-video"
+         src="assets/intro.mp4"
+         autoplay muted loop playsinline
+         poster="">
+  </video>
+  <div class="overlay">
+    <div>
+      <h1>Manar Khashan</h1>
+      <p>Game Writer · Fantasy Author · Narrative Designer</p>
+      <a href="#about" class="btn">LOAD PORTFOLIO</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WHITE ABOUT SECTION -->
-  <section id="about" class="plain">
-    <h2>About Me</h2>
-    <p>I design choices that matter and scenes players feel the morning after. My strengths: branching dialogue, cinematic pacing, and emotional storytelling.</p>
-    <p>Published author of <em>Ghost Poetry</em>; currently building <em>Anguish</em> (dark fantasy) and game writing samples.</p>
-  </section>
+<!-- WHITE SECTION -->
+<section id="about" class="plain">
+  <h2>About Me</h2>
+  <p>I design choices that matter and scenes players feel the morning after. Strengths: branching dialogue, cinematic pacing, emotional storytelling.</p>
+</section>
 
-  <!-- WALKING LOOP VIDEO FOR SAMPLES -->
-  <section class="video-section" id="samples">
-    <video class="bg-video" src="assets/loop.mp4" autoplay muted loop playsinline></video>
-    <div class="overlay">
-      <div>
-        <h2>Collect the Quests</h2>
-        <p>3 quick samples below</p>
-        <a class="btn" href="marias-death.html" target="_blank">Maria’s Death</a>
-        <a class="btn" href="kane-vs-guards.html" target="_blank">Kane vs Guards</a>
-        <a class="btn" href="thedream-scene.html" target="_blank">Dream Sequence</a>
-      </div>
+<!-- WALKING LOOP VIDEO -->
+<section class="video-section" id="samples">
+  <video class="bg-video"
+         src="assets/loop.mp4"
+         autoplay muted loop playsinline
+         poster="">
+  </video>
+  <div class="overlay">
+    <div>
+      <h2>Collect the Quests</h2>
+      <p>Three quick samples (1–3 pages each).</p>
     </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="plain">
-    <h2>Contact</h2>
-    <p><a href="mailto:manarkhashan@gmail.com">manarkhashan@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com/in/manar-khashan-3194b6322/" target="_blank">LinkedIn</a></p>
-    <p><a href="assets/ManarKhashan_CV.pdf" target="_blank">Download CV</a></p>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
 
-</html>
+
 
