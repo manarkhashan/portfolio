@@ -5,8 +5,8 @@ html, body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto,
 /* Video sections */
 .video-section {
   position: relative;
-  height: 80vh;        /* big, cinematic block */
-  min-height: 520px;   /* don’t get too small */
+  height: 60vh;        /* big, cinematic block */
+  min-height: 420px;   /* don’t get too small */
   overflow: hidden;    /* hide overflow outside the section */
 }
 
@@ -50,4 +50,5 @@ html, body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto,
   max-width: 900px;
   margin: 0 auto;
 }
+
 
