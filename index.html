@@ -3,55 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Manar Khashan | Portfolio</title>
+  <title>Manar Khashan | Game Writer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- #1 OPENING VIDEO SECTION -->
-  <section class="video-section" id="top">
-    <!-- The video itself -->
+  <!-- ========== HERO / OPENING VIDEO ========== -->
+  <section class="video-section hero" id="top">
     <video class="bg-video"
-           src="portfolio opening page.mp4"
-           autoplay muted loop playsinline
-           poster="">
+      src="https://raw.githubusercontent.com/manarkhashan/portfolio/main/Copy%20of%20portfolio%20opening%20page.mp4"
+      autoplay muted loop playsinline>
     </video>
 
-    <!-- The overlay (text/buttons sitting on top of the video) -->
-    <div class="overlay">
-      <div class="center">
+    <div class="overlay center">
+      <div class="content">
         <h1>Manar Khashan</h1>
-        <p>Game Writer · Narrative Designer</p>
-        <a href="#about" class="btn">LOAD PORTFOLIO</a>
+        <p class="tagline">Game Writer · Narrative Designer</p>
+        <div class="btnrow">
+          <a href="#about" class="btn btn--primary">LOAD PORTFOLIO</a>
+          <a href="#samples" class="btn btn--ghost">SKIP INTRO</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- WHITE SECTION (readable text between videos) -->
+  <!-- ========== WHITE “ABOUT” SECTION ========== -->
   <section id="about" class="plain">
     <h2>About Me</h2>
     <p>I design choices that matter and scenes players feel the morning after. Strengths: branching dialogue, cinematic pacing, and emotional storytelling.</p>
+    <p>Published author of <em>Ghost Poetry</em>; currently building <em>Anguish</em> (dark fantasy) and game writing samples.</p>
   </section>
 
-  <!-- #2 WALKING LOOP VIDEO SECTION -->
-  <section class="video-section" id="samples">
+  <!-- ========== SAMPLES LOOP VIDEO (with clickable chips) ========== -->
+  <section id="samples" class="video-section">
     <video class="bg-video"
-           src="Copy of portfolio opening page.mp4"
-           autoplay muted loop playsinline
-           poster="">
+      src="https://raw.githubusercontent.com/manarkhashan/portfolio/main/portfolio%20opening%20page.mp4"
+      autoplay muted loop playsinline>
     </video>
 
-    <div class="overlay">
-      <div class="center">
+    <div class="overlay top">
+      <div class="content">
         <h2>Collect the Quests</h2>
-        <p>Three quick samples (1–3 pages each).</p>
+        <p>Three quick reads (1–3 pages each).</p>
+      </div>
+    </div>
+
+    <!-- Position these chips by changing top/left % -->
+    <a class="chip" style="top:66%; left:20%;" href="marias-death.html" target="_blank">🗡️ Branching Dialogue</a>
+    <a class="chip" style="top:66%; left:50%;" href="kane-vs-guards.html" target="_blank">🎬 Cinematic Script</a>
+    <a class="chip" style="top:66%; left:80%;" href="thedream-scene.html" target="_blank">🐉 Barks & Items</a>
+  </section>
+
+  <!-- ========== WHITE “PUBLISHED WORK” ========== -->
+  <section id="published" class="plain">
+    <h2>Published Work</h2>
+    <p><strong>Ghost Poetry (2023)</strong> — my debut poetry collection.</p>
+    <p><a href="https://www.amazon.com/ghost-poetry-manar-khashan/dp/B0F1L3RZ9F/" target="_blank">Read on Amazon</a></p>
+  </section>
+
+  <!-- ========== (OPTIONAL) CONTACT LOOP (reuse the same samples loop) ========== -->
+  <section id="contact" class="video-section">
+    <video class="bg-video"
+      src="https://raw.githubusercontent.com/manarkhashan/portfolio/main/portfolio%20opening%20page.mp4"
+      autoplay muted loop playsinline>
+    </video>
+
+    <div class="overlay center">
+      <div class="content">
+        <h2>The Journey Ends Here</h2>
+        <div class="btnrow">
+          <a class="btn btn--primary" href="mailto:manarkhashan@gmail.com">Email</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/manar-khashan-3194b6322/" target="_blank">LinkedIn</a>
+          <a class="btn btn--ghost" href="assets/ManarKhashan_CV.pdf" target="_blank">CV</a>
+        </div>
       </div>
     </div>
   </section>
 
 </body>
 </html>
-
 
 
 
