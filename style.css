@@ -282,6 +282,31 @@ p { color: var(--text-secondary); margin-bottom: 20px; }
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
     gap: 10px;
     margin-top: 20px;
+
+   /* 1. Force the grid to stay tight */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 15px;
+    width: 100%;
+}
+
+/* 2. The Fix: Force the videos to behave like the images */
+.art-grid video, 
+.art-grid img {
+    width: 100% !important;    /* Forces it to match the grid column */
+    height: 150px !important;   /* Forces the height to be small */
+    object-fit: cover;          /* Crops the video so it stays in the box */
+    border-radius: 8px;
+    display: block;
+}
+
+/* 3. Extra safety: Ensure the about-card doesn't expand too much */
+#art.about-card {
+    max-width: 100%;
+    overflow: hidden;
+}
+}
 }
 }
 }
