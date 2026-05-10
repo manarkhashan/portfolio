@@ -266,6 +266,23 @@ p { color: var(--text-secondary); margin-bottom: 20px; }
     transform: scale(1.05);
     border: 1px solid var(--accent-color);
     transition: 0.3s;
+
+    /* This ensures videos inside the art grid behave exactly like the images */
+#art video {
+    width: 100%;       /* Fills the column width */
+    height: 150px;     /* Matches the image height */
+    object-fit: cover; /* Crops the video to fit the square so it doesn't get huge */
+    border-radius: 8px;
+    display: block;    /* Removes any weird spacing at the bottom */
+}
+
+/* Update your grid to make sure it's forcing the size */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    gap: 10px;
+    margin-top: 20px;
+}
 }
 }
 }
