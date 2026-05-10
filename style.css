@@ -20,12 +20,12 @@ html {
 body {
     background-color: var(--bg-color);
     color: var(--text-main);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-
+/* NAVIGATION */
 nav {
     position: fixed;
     top: 0;
@@ -42,19 +42,16 @@ nav {
 nav a {
     color: var(--text-main);
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 0.85rem;
+    margin: 0 15px;
+    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 1px;
     text-transform: uppercase;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: var(--accent-color);
-}
+nav a:hover { color: var(--accent-color); }
 
-
+/* SECTIONS */
 section {
     min-height: 100vh;
     padding: 120px 10% 80px;
@@ -63,132 +60,65 @@ section {
     justify-content: center;
 }
 
-.gray-bg { background-color: #121212; }
-.dark-bg { background-color: #080808; }
-
 h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 10px; }
 h2 { font-size: 2.5rem; margin-bottom: 30px; color: var(--accent-color); }
 p { color: var(--text-secondary); margin-bottom: 20px; }
 
-
-.profile-header {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 50px;
-}
-
+/* PROFILE */
+.profile-header { text-align: center; margin-bottom: 50px; }
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 180px; height: 180px;
     border-radius: 50%;
     border: 3px solid var(--accent-color);
-    margin-bottom: 25px;
     object-fit: cover;
-}
-
-.title {
-    font-size: 1.5rem;
-    color: var(--text-main);
-    font-weight: 400;
     margin-bottom: 20px;
 }
-
 .hook {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: var(--text-main);
+    font-style: italic; font-size: 1.1rem;
     border-left: 4px solid var(--accent-color);
-    padding-left: 20px;
-    max-width: 700px;
-    margin: 0 auto;
+    padding-left: 20px; max-width: 700px; margin: 0 auto;
 }
 
-
+/* CARDS */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 40px;
 }
-
 .about-card {
     background: var(--card-bg);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     border: 1px solid #222;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
+    transition: 0.3s;
 }
-
-
 .about-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
     border-color: var(--accent-color);
-    box-shadow: 0 20px 40px rgba(255, 0, 60, 0.15);
 }
 
-.about-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.novel-stat {
-    display: block;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    font-weight: bold;
-}
-
-.clickable { cursor: pointer; }
-
-
+/* ART GALLERY - THE VIDEO FIX */
 .art-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.art-grid img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.art-grid img:hover { transform: scale(1.05); }
-
-.stats-screenshot {
-    max-width: 100%;
-    border-radius: 15px;
-    border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-
-.wall-of-love {
+.art-grid img, 
+.art-grid video {
+    width: 100% !important;
+    height: 150px !important; /* This forces the small size */
+    object-fit: cover;
+    border-radius: 8px;
     background: #000;
-    padding: 60px 0 120px;
-    position: relative;
-    overflow: hidden;
 }
 
-.ticker {
-    display: flex;
-    width: max-content;
-    animation: scrollTicker 60s linear infinite;
-}
-
-.ticker img {
-    height: 100px;
-    margin: 0 30px;
-    filter: grayscale(100%) opacity(0.6);
-    transition: all 0.3s;
-}
-
-.ticker img:hover {
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1.1);
-}
+/* FOOTER TICKER */
+.wall-of-love { background: #000; padding: 60px 0 100px; overflow: hidden; }
+.ticker { display: flex; width: max-content; animation: scrollTicker 40s linear infinite; }
+.ticker img { height: 80px; margin: 0 20px; filter: grayscale(100%); transition: 0.3s; }
+.ticker img:hover { filter: grayscale(0%); transform: scale(1.1); }
 
 @keyframes scrollTicker {
     0% { transform: translateX(0); }
@@ -196,118 +126,16 @@ p { color: var(--text-secondary); margin-bottom: 20px; }
 }
 
 .fixed-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: var(--accent-color);
-    color: white;
-    text-align: center;
-    padding: 12px 0;
-    font-weight: 800;
-    letter-spacing: 3px;
+    position: fixed; bottom: 0; width: 100%;
+    background: var(--accent-color); color: white;
+    text-align: center; padding: 10px 0; font-weight: 800;
     z-index: 1100;
-    text-transform: uppercase;
 }
 
-
-.doc-link, .apply-btn {
-    display: inline-block;
-    background: var(--accent-color);
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: transform 0.2s, background 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.doc-link:hover {
-    background: #D40032;
-    transform: scale(1.05);
-}
-
-
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    section { padding: 80px 5%; }
-
-    /* If the screen is smaller than 768px (Phone View) */
-@media (max-width: 768px) {
-    .profile-header h1 { font-size: 2.2rem; }
-    .card-container { grid-template-columns: 1fr; } /* Stack cards vertically */
-    .art-grid { grid-template-columns: repeat(2, 1fr); } /* 2 columns for art */
-    section { padding: 60px 5% 40px; }
-
-    /* This targets the container inside the card */
-.art-grid {
-    display: grid;
-    /* This makes 3 columns on laptop, and adjusts for smaller screens */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    gap: 10px;
-    margin-top: 20px;
-}
-
-/* This makes both Images AND Videos small and uniform */
-.art-grid img, 
-.art-grid video {
-    width: 100%;
-    height: 150px; /* Force them to be small squares */
-    object-fit: cover; /* Keeps them from looking squished */
-    border-radius: 5px;
-    background: #000; /* Backdrop for videos loading */
-}
-
-/* Hover effect to show they are clickable */
-.art-grid img:hover, 
-.art-grid video:hover {
-    transform: scale(1.05);
-    border: 1px solid var(--accent-color);
-    transition: 0.3s;
-
-    /* This ensures videos inside the art grid behave exactly like the images */
-#art video {
-    width: 100%;       /* Fills the column width */
-    height: 150px;     /* Matches the image height */
-    object-fit: cover; /* Crops the video to fit the square so it doesn't get huge */
-    border-radius: 8px;
-    display: block;    /* Removes any weird spacing at the bottom */
-}
-
-/* Update your grid to make sure it's forcing the size */
-.art-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-    gap: 10px;
-    margin-top: 20px;
-
-   /* 1. Force the grid to stay tight */
-.art-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    gap: 15px;
-    width: 100%;
-}
-
-/* 2. The Fix: Force the videos to behave like the images */
-.art-grid video, 
-.art-grid img {
-    width: 100% !important;    /* Forces it to match the grid column */
-    height: 150px !important;   /* Forces the height to be small */
-    object-fit: cover;          /* Crops the video so it stays in the box */
-    border-radius: 8px;
-    display: block;
-}
-
-/* 3. Extra safety: Ensure the about-card doesn't expand too much */
-#art.about-card {
-    max-width: 100%;
-    overflow: hidden;
-}
-}
-}
-}
-}
+    h1 { font-size: 2.2rem; }
+    nav { padding: 15px 0; }
+    nav a { margin: 0 5px; font-size: 0.65rem; }
+    .art-grid { grid-template-columns: repeat(2, 1fr); }
 }
